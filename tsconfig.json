@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
+    "noImplicitAny": false,
     "target": "esnext",
     "module": "esnext",
-    "strict": true,
+    "strict": false,// js/ts 混用时设为false
     "jsx": "preserve",
     "moduleResolution": "node",
     "experimentalDecorators": true,
@@ -12,11 +13,11 @@
     "forceConsistentCasingInFileNames": true,
     "useDefineForClassFields": true,
     "sourceMap": true,
-    "baseUrl": ".",
+    "baseUrl": ".",//设置baseUrl告诉编译器到哪里去查找模块,所有非相对模块导入都会被当作相对于baseUrl
     "types": [
       "webpack-env"
     ],
-    "paths": {
+    "paths": {//设置路径映射
       "@/*": [
         "src/*"
       ]
